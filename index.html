@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lian</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blocks.css">
+    <link rel="stylesheet" href="css/media.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="site-logo"><a href="./index.html"><img src="assets/images/site-logo.png" alt="" class="site-logo__img"></a></div>
+            <div class="navigaton-wrap">
+              <nav class="navigation">
+                <ul class="navigation__container">
+                  <li class="navigation__item navigation__item--active"><a href="index.html" class="navigation__item-link">Home</a></li>
+                  <li class="navigation__item"><a href="./pages/about.html" class="navigation__item-link">About</a></li>
+                  <li class="navigation__item"><a href="portfolio.html" class="navigation__item-link">Portfolio</a></li>
+                  <li class="navigation__item"><a href="blog.html" class="navigation__item-link">Blog</a></li>
+                  <li class="navigation__item"><a href="contact.html" class="navigation__item-link">Contact</a></li>
+                  <!-- <li class="navigation__item navigation__search"><i class=""></i></li> -->
+                </ul>
+              </nav>
+              <div class="navigation__btn">
+                <div class="navigation__btn-stroke"></div>
+                <div class="navigation__btn-stroke"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header-slider">
+            <div class="header-slider__inner">
+              <div class="header-slider__item" style="background-image: url(./assets/images/Headers/slide01.jpg);"></div>
+              <div class="header-slider__item" style="background-image: url(./assets/images/Headers/slide02.jpg);"></div>
+              <div class="header-slider__item" style="background-image: url(./assets/images/Headers/slide01.jpg);"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="categories">
+          <div class="container">
+            <div class="categories__inner">
+              <ul class="categories__menu">
+                <li class="categories__item categories__item--active">All</li>
+                <li class="categories__item">Logo</li>
+                <li class="categories__item">Mobile App</li>
+                <li class="categories__item">Wordpress</li>
+                <li class="categories__item">Web Design</li>
+                <li class="categories__item">UI/IX</li>
+                <li class="categories__item">Branding</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="galery">
+          <div class="container">
+            <div class="masonry-grid galery__inner">
+              <div class="masonry-grid-sizer"></div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/01.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/02.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/03.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/04.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/05.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/06.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/07.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/08.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/09.jpg" alt="">
+                </div>
+              </div>
+              <div class="masonry-grid-item">
+                <div class="galery__item">
+                  <img src="assets/images/galery/10.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="galery__loadmore">
+              <button class="galery__loadmore-btn" type="button">Load More</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="markering">
+          <div class="container">
+            <div class="markering__inner">
+              <h4 class="markering__text">© 2016 <span>Mulitix Theme</span> by ThemeForces. All Rights Reserved.</h4>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/masonry.min.js"></script>
+    <script src="./assets/js/flickity.pkgd.min.js"></script>
+    <script>
+      var $masonryGrid = $('.masonry-grid').masonry({
+        itemSelector: '.masonry-grid-item',
+        columnWidth: '.masonry-grid-sizer',
+        percentPosition: true
+      });
+      // layout Masonry after each image loads
+      $masonryGrid.imagesLoaded().progress( function() {
+        $masonryGrid.masonry();
+      });
+      // Flickity
+      $('.header-slider__inner').flickity({
+        arrowShape: {
+          x0: 10,
+          x1: 60, y1: 50,
+          x2: 65, y2: 40,
+          x3: 25
+        },
+        wrapAround: true
+      });
+    </script>
+  </body>
+</html>
